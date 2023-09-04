@@ -1,4 +1,3 @@
-
 import sys
 try:
     import nmap
@@ -9,9 +8,9 @@ except:
 if len(sys.argv) != 3:
     sys.exit("Forneça dois argumentos, sendo o primeiro o alvo, o segundo as portas")
 
-ports = str(sys.argv[2]) # Variável da porta no argumento 2 
+ports = str(sys.argv[2]) # Variável da porta no argumento 2
 addrs = str(sys.argv[1]) # Variável da porta no argumento 1
-portlist=ports.split(',')
+portlist = ports.split(',')
 print(portlist) # Printa as portas
 
 scanner = nmap.PortScanner()
@@ -22,15 +21,5 @@ print(scanner.all_hosts()) # Printa o hostname desclarado
 for host in scanner.all_hosts():
     print(scanner[host])
     for port in portlist:
-        state=scanner[host]['tcp'][int(port)]['state']
-print(" [*] " + host + " tcp/"+port +" "+state)
-
-
-
-
-
-
-
-
-
-
+        state = scanner[host]['tcp'][int(port)]['state']
+        print(" [*] " + host + " tcp/" + port + " " + state)
