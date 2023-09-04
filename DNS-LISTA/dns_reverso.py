@@ -1,4 +1,4 @@
 import socket
 
-IP = "185.88.181.11"
+IP = "8.8.8.8"
 print(socket.gethostbyaddr(IP))

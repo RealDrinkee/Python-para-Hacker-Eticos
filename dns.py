@@ -1,6 +1,6 @@
 import socket
 
-dominio = "www.google.com"
+dominio = "dominio.com"
 nomes = ["www", "mail", "webmail", "ftp", "pop", "ns1", "ns2", "ns3", "intranet", "blog", "smtp", "vpn", "mx", "ns", "ns4", "ns5"]
 
 for nome in nomes:

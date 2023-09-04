@@ -1,6 +1,6 @@
 import socket
 
-dominio = "www.google.com"
+dominio = ""
 
 with open("brute-force.txt") as arquivo:
     nomes = arquivo.readlines()
