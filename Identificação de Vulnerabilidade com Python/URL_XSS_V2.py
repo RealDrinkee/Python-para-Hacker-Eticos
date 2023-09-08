@@ -9,45 +9,15 @@ def find_all_vulnerabilities(url):
             content = response.text
 
             vulnerabilities = {
-                "Cross-Site Scripting (XSS)": [
-                    r'<\s*script[^>]*>',
-                    r'alert\([^)]*\)',
-                    # Adicione outros padrões de XSS famosos aqui
-                ],
                 "SQL Injection": [
                     r"'.*\s+OR\s+.*--",
                     r'";\s*SELECT\s*\*',
                     # Adicione outros padrões de SQL Injection famosos aqui
                 ],
-                "Cross-Site Request Forgery (CSRF)": [
-                    r'<\s*input[^>]*\stype=["\']?hidden["\']?',
-                    r'<\s*form[^>]*\s*action=["\']?https?://',
-                    # Adicione outros padrões de CSRF aqui
-                ],
-                "Injection Attacks": [
-                    r'\bor\s*\d*\s*=\s*[0-9\']+',
-                    r'union\s+all\s+select',
-                    # Adicione outros padrões de Injection Attacks aqui
-                ],
-                "Autenticação e Gerenciamento de Sessões Fracos": [
-                    r"senha\s*=\s*['\"]?",
-                    r"sessionid\s*=\s*['\"]?",
-                    # Adicione outros padrões de Autenticação e Gerenciamento de Sessões Fracos aqui
-                ],
-                "Exposição de Dados Sensíveis": [
-                    r"senha",
-                    r"password",
-                    # Adicione outros padrões de Exposição de Dados Sensíveis aqui
-                ],
                 "Cross-Site Scripting (XSS)": [
                     r'<\s*script[^>]*>',
                     r'alert\([^)]*\)',
                     # Adicione outros padrões de XSS famosos aqui
-                ],
-                "SQL Injection": [
-                    r"'.*\s+OR\s+.*--",
-                    r'";\s*SELECT\s*\*',
-                    # Adicione outros padrões de SQL Injection famosos aqui
                 ],
                 "Cross-Site Request Forgery (CSRF)": [
                     r'<\s*input[^>]*\stype=["\']?hidden["\']?',
